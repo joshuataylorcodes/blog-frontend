@@ -6,7 +6,7 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #6b09da;
-  background-image: IEC61966-2.1;
+  background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/9d4e8cc5-f692-41df-a81a-a23d8d9aec6d/d1f6e9f-93e6faa9-7d0d-48c7-b495-392a148a5015.jpg");
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -32,7 +32,7 @@
   
 }
 
-#posts-new {
+#posts-new, #signup, #login {
   text-align: left;
   margin-bottom: 10px;
 }
