@@ -1,11 +1,12 @@
-export function Newpost() {
+import axios from "axios";
+
+export function Newpost(props) {
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("handleSubmit");
     const params = new FormData(event.target);
-    axios.post("http://localhost:3000/recipies/json", params).then((response) => {
-      console.log(response.data);
-    });
+    console.log("handleSubmit", params);
+    props.onCreatePost(params);
+    event.target.reset();
   };
   return (
     <div class="p-3 bg-info bg-opacity-10 border border-info rounded-end mb-5">
@@ -13,12 +14,13 @@ export function Newpost() {
         <div className="text-center">
           <h1>New post</h1>
         </div>
-        <form>
+        <form onSubmit={handleSubmit}>
           <div class="input-group flex-nowrap mb-3">
             <span class="input-group-text" id="addon-wrapping">
               Title
             </span>
             <input
+              name="title"
               type="text"
               class="form-control"
               placeholder=""
@@ -32,6 +34,7 @@ export function Newpost() {
               Body
             </span>
             <input
+              name="body"
               type="text"
               class="form-control"
               placeholder=""
@@ -44,6 +47,7 @@ export function Newpost() {
               Upload Image
             </button>
             <input
+              name="image"
               type="text"
               class="form-control"
               placeholder="image url"
@@ -53,8 +57,8 @@ export function Newpost() {
           </div>
 
           <div class="d-flex justify-content-center">
-            <button type="button" class="btn btn-dark d-grid">
-              Post
+            <button type="submit" class="btn btn-dark d-grid">
+              Submit Post
             </button>
           </div>
         </form>

@@ -16,20 +16,22 @@
 }
 
 #posts-index img {
+  margin-left: auto;
   width: 50%;
-  height: 400px;
+  height: 50%;
   display: -webkit-box;
   margin-right: auto;
 }
 
 #posts-index h1 {
-  text-align: left;
+  text-align: center;
 }
 
 #posts-index h3 {
-  text-align: left;
   border: 1px solid;
-  
+  background-color: rgb(143, 29, 249);
+  border-radius: 1em;
+  text-align: center;
 }
 
 #posts-new, #signup, #login {
@@ -42,8 +44,3 @@ html {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.posts h3 {
-  margin-left: auto;
-  background-color: rgb(143, 29, 249);
-  
-}
