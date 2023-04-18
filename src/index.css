@@ -1,4 +1,4 @@
-:root {
+body {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -29,9 +29,11 @@
 
 #posts-index h3 {
   border: 1px solid;
+  margin-left: auto;
   background-color: rgb(143, 29, 249);
   border-radius: 1em;
   text-align: center;
+  
 }
 
 #posts-new, #signup, #login {
