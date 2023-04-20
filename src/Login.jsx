@@ -29,22 +29,50 @@ export function Login() {
   };
 
   return (
-    <div id="login">
-      <h1>Login</h1>
-      <ul>
-        {errors.map((error) => (
-          <li key={error}>{error}</li>
-        ))}
-      </ul>
-      <form onSubmit={handleSubmit}>
-        <div>
-          Email: <input name="email" type="email" />
+    <div className="p-3 bg-info bg-opacity-10 border border-info rounded-end mb-5">
+      <div id="login">
+        <div className="text-center">
+          <h1>Login</h1>
         </div>
-        <div>
-          Password: <input name="password" type="password" />
-        </div>
-        <button type="submit">Login</button>
-      </form>
+        <ul>
+          {errors.map((error) => (
+            <li key={error}>{error}</li>
+          ))}
+        </ul>
+        <form onSubmit={handleSubmit}>
+          <div class="input-group flex-nowrap mb-3">
+            <span class="input-group-text" id="addon-wrapping">
+              Email
+            </span>
+            <input
+              name="email"
+              type="email"
+              class="form-control"
+              placeholder=""
+              aria-label="Email"
+              aria-describedby="addon-wrapping"
+            />
+          </div>
+          <div class="input-group flex-nowrap mb-3">
+            <span class="input-group-text" id="addon-wrapping">
+              Password
+            </span>
+            <input
+              name="password"
+              type="password"
+              class="form-control"
+              placeholder=""
+              aria-label="Password"
+              aria-describedby="addon-wrapping"
+            />
+          </div>
+          <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-dark d-grid">
+              Login
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }

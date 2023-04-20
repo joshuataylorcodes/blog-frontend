@@ -4,10 +4,12 @@ export function PostsShow(props) {
   const handleSubmit = (event) => {
     event.preventDefault();
     const params = new FormData(event.target);
-    axios.patch("http://localhost:3000/posts/" + props.post.id + ".json", params).then((response) => {
-      console.log(response.data);
-      event.target.reset();
-    });
+    props.onUpdatePost(props.post.id, params);
+    event.target.reset();
+  };
+
+  const handleClick = () => {
+    props.onDestroyPost(props.post);
   };
 
   return (
@@ -73,6 +75,10 @@ export function PostsShow(props) {
             </button>
           </div>
         </form>
+
+        <button type="submit" class="btn btn-warning d-grid" onClick={handleClick}>
+          Delete Recipie
+        </button>
       </div>
     </div>
   );

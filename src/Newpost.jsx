@@ -5,9 +5,10 @@ export function Newpost(props) {
     console.log("handleSubmit", params);
     props.onCreatePost(params);
     event.target.reset();
+    window.location.href = "/";
   };
   return (
-    <div class="p-3 bg-info bg-opacity-10 border border-info rounded-end mb-5">
+    <div className="p-3 bg-info bg-opacity-10 border border-info rounded-end mb-5">
       <div id="posts-new">
         <div className="text-center">
           <h1>New post</h1>

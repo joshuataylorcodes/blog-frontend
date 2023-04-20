@@ -17,8 +17,8 @@ body {
 
 #posts-index img {
   margin-left: auto;
-  width: 50%;
-  height: 50%;
+  width: 500px;
+  height: auto;
   display: -webkit-box;
   margin-right: auto;
 }
@@ -27,12 +27,17 @@ body {
   text-align: center;
 }
 
+#posts-index button {
+  text-align: center;
+}
+
 #posts-index h3 {
-  border: 1px solid;
+  border: 3px solid;
   margin-left: auto;
   background-color: rgb(143, 29, 249);
-  border-radius: 1em;
+  border-radius: 2em;
   text-align: center;
+  color: rgb(0, 0, 0);
   
 }
 
@@ -44,5 +49,19 @@ body {
 html {
   scroll-behavior: smooth;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+#posts-showpage img {
+  margin-left: auto;
+  width: 500px;
+  height: auto;
+  display: -webkit-box;
+  margin-right: auto;
+  margin-bottom: 2em;
+}
+
+#posts-showpage p {
+font-size: xx-large;
+font-weight: 600;
 }
 

@@ -8,5 +8,11 @@ export function LogoutLink() {
     window.location.href = "/";
   };
 
-  return <button onClick={handleClick}>Logout</button>;
+  return (
+    <div class="d-flex justify-content-center">
+      <button onClick={handleClick} class="btn btn-dark d-grid">
+        Logout
+      </button>
+    </div>
+  );
 }
