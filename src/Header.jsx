@@ -24,12 +24,20 @@ export function Header() {
               <a class="nav-link active" aria-current="page" href="/">
                 All posts
               </a>
-              <a class="nav-link" href="/login">
-                Login
-              </a>
-              <a class="nav-link" href="/signup">
-                Sign Up
-              </a>
+              {localStorage.jwt === undefined ? (
+                <>
+                  <a class="nav-link" href="/login">
+                    Login
+                  </a>
+                  <a class="nav-link" href="/signup">
+                    Sign Up
+                  </a>
+                </>
+              ) : (
+                <a class="nav-link" href="/logoutlink">
+                  Log Out
+                </a>
+              )}
               <a class="nav-link" href="/posts/new">
                 New Post
               </a>
